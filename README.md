@@ -26,7 +26,7 @@
         ws.Range("L" & 2 + j).Value = 0
             Else`
 
-`        ws.Range("I" & 2 + j).Value = ws.Cells(i, 1).Value
+`       ws.Range("I" & 2 + j).Value = ws.Cells(i, 1).Value
                 ws.Range("J" & 2 + j).Value = yearlyChange
                 ws.Range("J" & 2 + j).NumberFormat = "0.00"
                 ws.Range("K" & 2 + j).Value = percentageChange
@@ -34,8 +34,8 @@
                 ws.Range("L" & 2 + j).Value = Total`
 
 
-`        Code to accumulate total volume for the same ticker symbol
-            Total = Total + ws.Cells(i, 7).Value
+`Code to accumulate total volume for the same ticker symbol
+        Total = Total + ws.Cells(i, 7).Value
         End If
     Next i`
 
