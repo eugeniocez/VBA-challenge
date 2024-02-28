@@ -19,14 +19,14 @@ Some of the help I received by making use of AI was in this section of my code, 
 
 Then during my tutor session, my tutor helped me a lot with many sections of my code, he helped overall to make the code look cleaner and organized with the appropriate indents, and other sections of the code, as I couldn't figure out how to work out adding number formats and functionality to my script.
 
-`If Total = 0 Then
+`        If Total = 0 Then
                 ws.Range("I" & 2 + j).Value = Cells(i, 1).Value
                 ws.Range("J" & 2 + j).Value = 0
                 ws.Range("K" & 2 + j).Value = "%" & 0
                 ws.Range("L" & 2 + j).Value = 0
             Else`
 
-`ws.Range("I" & 2 + j).Value = ws.Cells(i, 1).Value
+`        ws.Range("I" & 2 + j).Value = ws.Cells(i, 1).Value
                 ws.Range("J" & 2 + j).Value = yearlyChange
                 ws.Range("J" & 2 + j).NumberFormat = "0.00"
                 ws.Range("K" & 2 + j).Value = percentageChange
@@ -34,11 +34,13 @@ Then during my tutor session, my tutor helped me a lot with many sections of my 
                 ws.Range("L" & 2 + j).Value = Total`
 
 
-`Code to accumulate total volume for the same ticker symbol
+`        Code to accumulate total volume for the same ticker symbol
             Total = Total + ws.Cells(i, 7).Value
         End If
     Next i`
     
+    --------------------------------------------------------------------------------------
+   
     `   Output greatest percentage increase, decrease, and total volume
     ws.Range("Q2") = "%" & WorksheetFunction.Max(ws.Range("K2:K" & RowCount)) * 100
     ws.Range("Q3") = "%" & WorksheetFunction.Min(ws.Range("K2:K" & RowCount)) * 100
